@@ -1,0 +1,141 @@
+#grid-container {
+    display: grid;
+    grid-template-areas: 
+    "h h h s"
+    "h h h s" 
+    "f f f s";
+    grid-template-rows: 1fr 1fr 10rem;
+    grid-template-columns: 1fr 1fr 1fr auto;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+/* sidebar */
+
+header {
+    grid-area: s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+#sticky {
+    position: sticky;
+    top: 2rem;
+    text-align: center;
+}
+
+#profile-photo img {
+    margin: 1rem 1rem;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+}
+
+#nav a {
+    text-decoration: none;
+    color: white;
+}
+
+#nav div {
+    margin: 1rem auto;
+}
+
+
+/*main content*/
+
+main {
+    grid-area: h;
+    display: grid;
+    grid-template-areas: 
+    "w w w"
+    "p p p";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 3rem;
+}
+
+#welcome-container {
+    grid-area: w;
+    margin: 1rem 0 0 2rem;
+    font-family: 'Space Mono', monospace;
+}
+
+#title-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 25rem;
+}
+
+#welcome {
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+    font-size: 5rem;
+    color: white;
+}
+
+#bio, #flex-body {
+    margin: auto 3rem auto 6rem;
+}
+
+.italics {
+    font-style: italic;
+    font-family: 'Space Mono', monospace;
+}
+
+/*boxes*/
+
+#flex-body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    grid-area: p;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    color: white;
+}
+
+
+.square {
+    width: 15rem;
+    height: 15rem;
+    margin: .6rem 2rem;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.pink {
+    background-color: pink;
+}
+
